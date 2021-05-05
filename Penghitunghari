@@ -1,0 +1,253 @@
+/ *
+ * Untuk mengubah header lisensi ini, pilih License Headers di Project Properties.
+* Untuk mengubah file template ini, pilih Tools | Template
+ * dan buka template di editor.
+ * /
+paket  GUI ;
+import  java.awt.HeadlessException ;
+impor  java.awt.event.KeyEvent ;
+import  java.io.BufferedWriter ;
+import  java.io.FileWriter ;
+impor  java.io.IOException ;
+import  javax.swing.JOptionPane ;
+Public  class  AplikasiPenghitungHari  memperluas  javax.swing . JFrame {
+    / **
+     * Membuat bentuk baru AplikasiPenghitungHari
+     * /
+     AplikasiPenghitungHari publik () {
+        initComponents ();
+    }
+    / **
+     * Metode ini dipanggil dari dalam konstruktor untuk menginisialisasi formulir.
+     * PERINGATAN: JANGAN mengubah kode ini. Isi dari metode ini selalu
+     * dibuat ulang oleh Editor Formulir.
+     * /
+    @Suppressings ( " tidak ada " )
+    // <editor-fold defaultstate = "collapsed" desc = "Generated Code"> // GEN-BEGIN: initComponents
+    private  void  initComponents () {
+        jPanel1 =  new  javax.swing . JPanel ();
+        jLabel1 =  javax.swing baru  . JLabel ();
+        jLabel2 =  javax.swing baru  . JLabel ();
+        jLabel3 =  javax.swing baru  . JLabel ();
+        fldTahun =  new  javax.swing . JTextField ();
+        cmbBulan =  new  javax.swing.JComboBox <> ();
+        lbJumlah =  javax.swing baru  . JLabel ();
+        btHapus =  javax.swing baru  . JButton ();
+        btHitung =  new  javax.swing . JButton ();
+        btSimpan =  javax.swing baru  . JButton ();
+        btKeluar =  new  javax.swing . JButton ();
+        setDefaultCloseOperation ( javax.swing . WindowConstants . EXIT_ON_CLOSE );
+        jPanel1 . setBackground ( new  java.awt . Color ( 255 , 204 , 204 ));
+        jPanel1 . setBorder ( javax.swing . BorderFactory . createTitledBorder ( " Aplikasi Penghitung Jumlah Hari v0.1 " ));
+        jPanel1 . SetFont ( baru  java.awt . Font ( " Times New Roman " , 0 , 12 )); // NOI18N
+        jLabel1 . setFont ( baru  java.awt . Font ( " Vivaldi " , 1 , 24 )); // NOI18N
+        jLabel1 . setText ( " Penghitung Jumlah Hari " );
+        jLabel2 . SetFont ( baru  java.awt . Font ( " Times New Roman " , 0 , 14 )); // NOI18N
+        jLabel2 . setText ( " Tahun " );
+        jLabel3 . SetFont ( baru  java.awt . Font ( " Times New Roman " , 0 , 14 )); // NOI18N
+        jLabel3 . setText ( " Bulan " );
+        fldTahun . addActionListener ( java.awt.event baru  . ActionListener () {
+            public  void  actionPerformed ( java.awt.event . ActionEvent  evt ) {
+                fldTahunActionPerformed (evt);
+            }
+        });
+        cmbBulan . setModel ( new  javax.swing.DefaultComboBoxModel <> ( String baru  [] { " Januari " , " Februari " , " Maret " , " April " , " Mei " , " Juni " , " Juli " , " Agustus " , " September " , " Oktober "" , " Desember " }));
+        lbJumlah . SetFont ( baru  java.awt . Font ( " Times New Roman " , 0 , 14 )); // NOI18N
+        lbJumlah . setText ( " Jumlah hari adalah " );
+        btHapus . setBackground ( new  java.awt . Color ( 255 , 153 , 153 ));
+        btHapus . setText ( " Hapus " );
+        btHapus . addActionListener ( java.awt.event baru  . ActionListener () {
+            public  void  actionPerformed ( java.awt.event . ActionEvent  evt ) {
+                btHapusActionPerformed (evt);
+            }
+        });
+        btHitung . setBackground ( new  java.awt . Color ( 255 , 153 , 153 ));
+        btHitung . setText ( " Hitung " );
+        btHitung . addActionListener ( java.awt.event baru  . ActionListener () {
+            public  void  actionPerformed ( java.awt.event . ActionEvent  evt ) {
+                btHitungActionPerformed (evt);
+            }
+        });
+        btSimpan . setBackground ( new  java.awt . Color ( 255 , 153 , 153 ));
+        btSimpan . setText ( " Simpan " );
+        btSimpan . addActionListener ( java.awt.event baru  . ActionListener () {
+            public  void  actionPerformed ( java.awt.event . ActionEvent  evt ) {
+                btSimpanActionPerformed (evt);
+            }
+        });
+        btKeluar . setBackground ( new  java.awt . Color ( 255 , 153 , 153 ));
+        btKeluar . setText ( " Keluar " );
+        btKeluar . addActionListener ( java.awt.event baru  . ActionListener () {
+            public  void  actionPerformed ( java.awt.event . ActionEvent  evt ) {
+                btKeluarActionPerformed (evt);
+            }
+        });
+        javax.swing . GroupLayout jPanel1Layout =  new  javax.swing . GroupLayout (jPanel1);
+        jPanel1 . setLayout (jPanel1Layout);
+        jPanel1Layout . setHorizontalGroup (
+            jPanel1Layout . createParallelGroup ( javax.swing . GroupLayout . Alignment . LEADING )
+            .addGroup (jPanel1Layout . createSequentialGroup ()
+                .addGroup (jPanel1Layout . createParallelGroup ( javax.swing . GroupLayout . Alignment . LEADING )
+                    .addGroup (jPanel1Layout . createSequentialGroup ()
+                        .addGap ( 77 , 77 , 77 )
+                        .addComponent (jLabel1, javax.swing . GroupLayout . PREFERRED_SIZE , 261 , javax.swing . GroupLayout . PREFERRED_SIZE ))
+                    .addGroup (jPanel1Layout . createSequentialGroup ()
+                        .addGap ( 43 , 43 , 43 )
+                        .addGroup (jPanel1Layout . createParallelGroup ( javax.swing . GroupLayout . Alignment . TRAILING )
+                            .addComponent (jLabel2)
+                            .addComponent (jLabel3))
+                        .addGap ( 56 , 56 , 56 )
+                        .addGroup (jPanel1Layout . createParallelGroup ( javax.swing . GroupLayout . Alignment . LEADING )
+                            .addComponent (cmbBulan, javax.swing . GroupLayout . PREFERRED_SIZE , 203 , javax.swing . GroupLayout . PREFERRED_SIZE )
+                            .addComponent (fldTahun, javax.swing . GroupLayout . PREFERRED_SIZE , 203 , javax.swing . GroupLayout . PREFERRED_SIZE )))
+                    .addGroup (jPanel1Layout . createSequentialGroup ()
+                        .addGap ( 21 , 21 , 21 )
+                        .addGroup (jPanel1Layout . createParallelGroup ( javax.swing . GroupLayout . Alignment . LEADING )
+                            .addGroup (jPanel1Layout . createSequentialGroup ()
+                                .addComponent (btHapus)
+                                .addPreferredGap ( javax.swing . LayoutStyle . ComponentPlacement . UNRELATED )
+                                .addComponent (btHitung))
+                            .addComponent (lbJumlah))))
+                .addContainerGap ( 91 , Pendek . MAX_VALUE ))
+            .addGroup ( javax.swing . GroupLayout . Penyelarasan . trailing , jPanel1Layout . createSequentialGroup ()
+                .addGap ( 0 , 0 , Pendek . MAX_VALUE )
+                .addComponent (btSimpan)
+                .addGap ( 18 , 18 , 18 )
+                .addComponent (btKeluar)
+                .addGap ( 34 , 34 , 34 ))
+        );
+        jPanel1Layout . setVerticalGroup (
+            jPanel1Layout . createParallelGroup ( javax.swing . GroupLayout . Alignment . LEADING )
+            .addGroup (jPanel1Layout . createSequentialGroup ()
+                .addGap ( 26 , 26 , 26 )
+                .addComponent (jLabel1)
+                .addGap ( 35 , 35 , 35 )
+                .addGroup (jPanel1Layout . createParallelGroup ( javax.swing . GroupLayout . Alignment . BASELINE )
+                    .addComponent (fldTahun, javax.swing . GroupLayout . PREFERRED_SIZE , javax.swing . GroupLayout . DEFAULT_SIZE , javax.swing . GroupLayout . PREFERRED_SIZE )
+                    .addComponent (jLabel2))
+                .addGap ( 30 , 30 , 30 )
+                .addGroup (jPanel1Layout . createParallelGroup ( javax.swing . GroupLayout . Alignment . LEADING )
+                    .addComponent (cmbBulan, javax.swing . GroupLayout . PREFERRED_SIZE , javax.swing . GroupLayout . DEFAULT_SIZE , javax.swing . GroupLayout . PREFERRED_SIZE )
+                    .addComponent (jLabel3))
+                .addGap ( 45 , 45 , 45 )
+                .addComponent (lbJumlah)
+                .addGap ( 18 , 18 , 18 )
+                .addGroup (jPanel1Layout . createParallelGroup ( javax.swing . GroupLayout . Alignment . BASELINE )
+                    .addComponent (btHapus)
+                    .addComponent (btHitung))
+                .addPreferredGap ( javax.swing . LayoutStyle . ComponentPlacement . RELATED )
+                .addGroup (jPanel1Layout . createParallelGroup ( javax.swing . GroupLayout . Alignment . BASELINE )
+                    .addComponent (btSimpan)
+                    .addComponent (btKeluar))
+                .addContainerGap ( javax.swing . GroupLayout . DEFAULT_SIZE , Short . MAX_VALUE ))
+        );
+        javax.swing . GroupLayout layout =  new  javax.swing . GroupLayout (getContentPane ());
+        getContentPane () . setLayout (tata letak);
+        tata letak . setHorizontalGroup (
+            tata letak . createParallelGroup ( javax.swing . GroupLayout . Alignment . LEADING )
+            .addGroup (layout . createSequentialGroup ()
+                .addContainerGap ()
+                .addComponent (jPanel1, javax.swing . GroupLayout . DEFAULT_SIZE , javax.swing . GroupLayout . DEFAULT_SIZE , Short . MAX_VALUE )
+                .addContainerGap ())
+        );
+        tata letak . setVerticalGroup (
+            tata letak . createParallelGroup ( javax.swing . GroupLayout . Alignment . LEADING )
+            .addGroup (layout . createSequentialGroup ()
+                .addContainerGap ()
+                .addComponent (jPanel1, javax.swing . GroupLayout . DEFAULT_SIZE , javax.swing . GroupLayout . DEFAULT_SIZE , Short . MAX_VALUE )
+                .addContainerGap ())
+        );
+        Pak();
+    } // </editor-fold> // GEN-END: initComponents
+    private  void  fldTahunActionPerformed ( java.awt.event . ActionEvent  evt ) { // GEN-FIRST: event_fldTahunActionPerformed
+        // TODO menambahkan kode penanganan Anda di sini:
+    } // GEN-LAST: event_fldTahunActionPerformed
+    private  void  btHapusActionPerformed ( java.awt.event . ActionEvent  evt ) { // GEN-FIRST: event_btHapusActionPerformed
+     lbJumlah . setText ( " Jumlah Hari Adalah " );
+        fldTahun . setText ( " " );
+        cmbBulan . setSelectedItem ( " Januari " );
+    } // GEN-LAST: event_btHapusActionPerformed
+    private  void  btHitungActionPerformed ( java.awt.event . ActionEvent  evt ) { // GEN-FIRST: event_btHitungActionPerformed
+         if (fldTahun . getText () . isEmpty ()) {
+            JOptionPane . showMessageDialog ( null , " Error: isian tahun kososng! " ,
+                    " Error: isian tahun kosong! " , JOptionPane . WARNING_MESSAGE );
+        } lain {
+            int tahun =  Integer . parseInt (fldTahun . getText ());
+            int jumlahHari;
+            if (cmbBulan . getSelectedItem () . sama dengan ( " Februari " )) {
+                if (((tahun %  4 ==  0 ) &&! (tahun %  100  ==  0 )) || (tahun %  400  ==  0 ))
+                    jumlahHari = 29 ;
+                else jumlahHari = 28 ;
+            } else  if (cmbBulan . getSelectedItem () . sama dengan ( " April " ) ||
+                     cmbBulan . getSelectedItem () . sama dengan ( " Juni " ) ||
+                     cmbBulan . getSelectedItem () . sama dengan ( " September " ) ||
+                    cmbBulan . getSelectedItem () . sama dengan ( " November " )) {
+                     jumlahHari = 30 ;
+        } lain {
+    jumlahHari = 31 ;
+        }
+         lbJumlah . setText ( " Jumlah Hari Pada Bulan " +
+                cmbBulan . getSelectedItem () +
+                 " Tahun " + tahun + " adalah " + jumlahHari);
+         }    
+    } // GEN-LAST: event_btHitungActionPerformed
+    private  void  btSimpanActionPerformed ( java.awt.event . ActionEvent  evt ) { // GEN-FIRST: event_btSimpanActionPerformed
+         coba {
+            coba ( BufferedWriter out =  new  BufferedWriter ( new  FileWriter ( " jumlah hari.txt " ))) {
+                keluar . tulis (lbJumlah . getText ());
+                JOptionPane . showMessageDialog ( null , " Berhasil disimpan dalam file " );
+            }
+        } menangkap ( IOException  |  HeadlessException e) {
+            Sistem . err . println ( " Kesalahan: " + e . getMessage ());
+        }          
+    } // GEN-LAST: event_btSimpanActionPerformed
+    private  void  btKeluarActionPerformed ( java.awt.event . ActionEvent  evt ) { // GEN-FIRST: event_btKeluarActionPerformed
+        Sistem . keluar ( 0 );
+    } // GEN-LAST: event_btKeluarActionPerformed
+    / **
+     * @param memperdebatkan argumen baris perintah
+     * /
+    public  static  void  main ( String  args []) {
+        / * Atur tampilan dan nuansa Nimbus * /
+        // <editor-fold defaultstate = "collapsed" desc = "Tampilan dan nuansa kode pengaturan (opsional)">
+        / * Jika Nimbus (diperkenalkan di Java SE 6) tidak tersedia, tetap gunakan tampilan dan nuansa default.
+         * Untuk detailnya lihat http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * /
+        coba {
+            untuk ( javax.swing . UIManager . LookAndFeelInfo info :  javax.swing . UIManager . getInstalledLookAndFeels ()) {
+                if ( " Nimbus " . sama dengan (info . getName ())) {
+                    javax.swing . UIManager . setLookAndFeel (info . getClassName ());
+                    istirahat ;
+                }
+            }
+        } menangkap ( ClassNotFoundException ex) {
+            java.util.logging . Logger . getLogger ( AplikasiPenghitungHari . class . getName ()) . log ( java.util.logging . Level . SEVERE , null , ex);
+        } catch ( InstantiationException ex) {
+            java.util.logging . Logger . getLogger ( AplikasiPenghitungHari . class . getName ()) . log ( java.util.logging . Level . SEVERE , null , ex);
+        } menangkap ( IllegalAccessException ex) {
+            java.util.logging . Logger . getLogger ( AplikasiPenghitungHari . class . getName ()) . log ( java.util.logging . Level . SEVERE , null , ex);
+        } catch ( javax.swing . UnsupportedLookAndFeelException ex) {
+            java.util.logging . Logger . getLogger ( AplikasiPenghitungHari . class . getName ()) . log ( java.util.logging . Level . SEVERE , null , ex);
+        }
+        // </editor-fold>
+        / * Buat dan tampilkan formulir * /
+        java.awt . EventQueue . invokeLater ( new  Runnable () {
+            public  void  run () {
+                baru  AplikasiPenghitungHari () . setVisible ( true );
+            }
+        });
+    }
+    // Deklarasi variabel - jangan ubah // GEN-BEGIN: variabel
+     javax.swing pribadi . JButton btHapus;
+     javax.swing pribadi . JButton btHitung;
+     javax.swing pribadi . JButton btKeluar;
+     javax.swing pribadi . JButton btSimpan;
+    pribadi  javax.swing.JComboBox < String > cmbBulan;
+     javax.swing pribadi . JTextField fldTahun;
+     javax.swing pribadi . JLabel jLabel1;
+     javax.swing pribadi . JLabel jLabel2;
+     javax.swing pribadi . JLabel jLabel3;
+     javax.swing pribadi . JPanel jPanel1;
+     javax.swing pribadi . JLabel lbJumlah;
+    // Deklarasi akhir variabel // GEN-END: variabel
+}
